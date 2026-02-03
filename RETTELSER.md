@@ -1,4 +1,25 @@
-# Rettelser #1 2026-01-28 (feilen oppdaget av student)
+# Rettelse #2 2026-02-03 
+
+## Refleksjonsspørsmål OPPGAVE4-3
+
+Spørsmålet her er formulert feil. I denne første versjonen av modellen, kan en student kun høre til ett program. Dermed blir spørsmålet redusert til *Hvordan ville du implementert at en student bare kan se sine egne karakterer?*. 
+
+Da blir policy følgende: 
+
+```sql
+CCREATE POLICY student_see_own_grades ON emneregistreringer
+FOR SELECT
+TO student_role
+USING (
+  student_id = (
+    SELECT student_id FROM bruker_student_mapping 
+    WHERE brukernavn = current_user
+  )
+);
+``` 
+Må bruke en *mapping-tabell* her.
+
+# Rettelse #1 2026-01-28 (feilen oppdaget av student)
 
 ## 3.2 Hent gjennomsnittlig karakter per emne
 

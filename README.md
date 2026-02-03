@@ -1,5 +1,10 @@
 # data1500-oving-03
-Oppgavesett 1.3 i DATA1500 våren 2026. Docker installasjon og introduksjon i databasehåndteringssystemer med fokus på databaseadministrasjon.
+Oppgavesett 1.3 i DATA1500 våren 2026. Docker installasjon og introduksjon i databasehåndteringssystemer med fokus på databaseadministrasjon. I denne filen finnes det en del løsninger for situasjoner man kan komme opp i. Oppgaveteksten finnes i 4 filer:
+- OPPGAVE1.md
+- OPPGAVE2.md
+- OPPGAVE3.md
+- OPPGAVE4.md
+
 
 ## Spesialtegn verdt å huske på
 
@@ -56,5 +61,4 @@ Lager en mappe som gir containeren tilgang til filer på vertsmaskinen.
 # Referanser
 [1] https://en.wikipedia.org/wiki/Byte_order_mark
 [2] https://en.wikipedia.org/wiki/Secure_Shell 
-[3] 
 

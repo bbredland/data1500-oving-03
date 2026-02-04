@@ -10,7 +10,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+I Docker kan man kjøre programmet uten å være redd for å påvirke resten av systemet. Da har man også bedre kontroll av hvordan systemet fungerer.
 
 ---
 
@@ -18,7 +18,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Det er en lagringsplass utenfor Dockeren. Det gjør at man ikke mister den dataen når man stopper eller fjerner dockeren. Man vil beholde dataen selv om man restarter den.
 
 ---
 
@@ -26,7 +26,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Dataen er lagret på maskinen ved bruk av "persistent volum". Men man vil vanligvis miste data hvis man ikke har en slik løsning.
 
 ---
 
@@ -34,7 +34,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Første gang må docker bygge opp en ny container og laste ned alle bilder. Den andre gangen trenger docker bare å laste opp fra persistent volum istedenfor å lage helt nytt.
 
 ---
 
@@ -42,7 +42,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Jeg ville delt gjennom Github eller Mail eller en annen sikker måte. Også ville jeg passet på at jeg ikke gir bort sensitiv data.
 
 ---
 
@@ -52,7 +52,8 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+INNER JOIN returnerer kun rader som har match i begge tabeller. og brukes når du kun vil ha rader som faktisk hører sammen.
+LEFT JOIN returnerer alle rader fra venstre tabell selv om det ikke er en match. Manglende data fylles med "null". Det er fint å bruke når man vil beholde alle radene fra venstre tabell.
 
 ---
 
@@ -60,7 +61,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Fremmednøkler sørger for at data henger sammen på en gyldig måte. Databasen vil hindre slettingen og gi feil. 
 
 ---
 
@@ -68,7 +69,8 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+GROUP BY sorterer radene og er nødvendig for aggregatfunksjoner fordi databasen må vite hvordan radene skal grupperes før de kan summeres eller telles. 
+Uten group by ville databasen kun gitt et samlet svar istedenfor blandet på radene
 
 ---
 
@@ -76,7 +78,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+En indeks er en datastruktur. Det gjør at databasen kan søke direkte på indeksen istedenfor å søke gjennom hele rader.
 
 ---
 
@@ -84,7 +86,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Legge til indekser og passe på at jeg ikke henter opp for mye data på en gang.
 
 ---
 
@@ -94,7 +96,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Det handler om at en bruker eller rolle ikke får tilgang til mer enn nødvendig. Det handler om sikkerhet og informasjonstilgang.
 
 ---
 
@@ -102,7 +104,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Roller er rettigheter og regler for enkelte grupper. En bruker er en person som er tildelt rolle. 
 
 ---
 
@@ -110,7 +112,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Istedenfor å måtte administrere mange brukere kan man gi rettigheter til en rolle og brukerne kan arve rettighetene direkte fra rollen. Da har man mye bedre oversikt og.
 
 ---
 
@@ -118,7 +120,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+DROP kan slette tabeller, views, funksjoner eller hele databaser. Det kan skape masse sikkerhetsbrudd og massetap av viktig informasjon og data.
 
 ---
 
@@ -126,7 +128,7 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 **Ditt svar:**
 
-[Skriv ditt svar her]
+Jeg ville laget en VIEW som sjekker at current_user = student_id; Derifra ville jeg vist informasjonen fra emneregistreringer. 
 
 ---
 
@@ -134,25 +136,34 @@ Skriv dine svar på refleksjonsspørsmålene fra hver oppgave her.
 
 Bruk denne delen til å dokumentere interessante funn, problemer du møtte, eller andre observasjoner:
 
-[Skriv dine notater her]
+Foreleser_role har ikke tilgang til DELETE.
+Student_role har ikke tilgang til INSERT eller UPDATE.
+
+Jeg så egentlig ikke denne delen før jeg var ferdig med alt.
+Jeg trengte ikke skrive inn noe passord når jeg logget inn på noen roller. Jeg vet ikke helt hvorfor, men jeg ville tippet det var siden den ser jeg er host til docker og databasen.
+
 
 
 ## Oppgave 4: Brukeradministrasjon og GRANT
 
 1. **Hva er Row-Level Security og hvorfor er det viktig?**
-   - Svar her...
+   - RLS er en mekanisme i PostgreSQL som gjør at man kan kontrollere hvilke rader brukere har tilgang til. Istedenfor at man har tilgang til hele tabeller. 
+   - RLS beskytter data og implementerer sikkerhet i databasen. 
 
 2. **Hva er forskjellen mellom RLS og kolonnebegrenset tilgang?**
-   - Svar her...
+   - RLS styrer hvilker rader man får lov til å se.
+   - Kolonne.. bestemmer hvilke kolonner man får lov til å se. 
 
 3. **Hvordan ville du implementert at en student bare kan se karakterer for sitt eget program?**
-   - Svar her...
+   - Da ville jeg laget en policy som sjekker at program_id matcher Current_user sitt program.
 
 4. **Hva er sikkerhetsproblemene ved å bruke views i stedet for RLS?**
-   - Svar her...
+   - Views er et logisk filter, mens RLS er en sikkerhetsmekanisme.
+   - Views beskytter kun mot SELECT. 
 
 5. **Hvordan ville du testet at RLS-policyer fungerer korrekt?**
-   - Svar her...
+   - Sjekke at policyen står i pg_policies. 
+   - Logge inn som forskjellige roller og kjøre noen tester.
 
 ---
 
